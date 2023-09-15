@@ -1,0 +1,30 @@
+{
+    "configurations": [
+    {
+        "name": "(gdb) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/bin/a.out",
+        "args": ["-ldl", "-lsfml-graphics", "-lsfml-window", "-lsfml-system" , "-std=c++17" ,"-Isrc/*.hpp",
+                "-Ilib/SFML/include",
+	            "-Llib/SFML/so"],
+        "stopAtEntry": true,
+        "cwd": "/home/nour/Desktop/game/",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            },
+            {
+                "description": "Set Disassembly Flavor to Intel",
+                "text": "-gdb-set disassembly-flavor intel",
+                "ignoreFailures": true
+            }
+        ]
+    }
+    ]
+}
